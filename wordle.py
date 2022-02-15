@@ -427,7 +427,7 @@ if __name__ == "__main__":
             scores = json.loads(fp.read())
         
         current_guess_space_total = test.get_current_valid_guess_count()
-        best_score = 9999
+        best_score = 99999 ##crumbs
         best_word = ""
 
         possible_guesses = test.get_current_guess_space()
@@ -445,7 +445,7 @@ if __name__ == "__main__":
                 max_value = max(guess_result.values())
                 scores[guess_word] = guess_result
                 if sum(guess_result.values()) != current_guess_space_total:
-                    ##double letter issues
+                    ##double letter issues - resolution in conflict? set pattern to false again
                     print(f"error! guess total {sum(guess_result.values())} is not equal to valid guess count: {current_guess_space_total}")
                 print(f" {guess_word} performed at: {max_value}")
 
