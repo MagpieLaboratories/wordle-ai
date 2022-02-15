@@ -441,7 +441,7 @@ if __name__ == "__main__":
                 print(f"new best word: {best_word} with score: {best_score}")
 
         scores = firstscores
-
+#test
         possible_guesses = test.get_current_guess_space()
 
         #### A B Y S [NOT S]
